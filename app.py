@@ -30,7 +30,7 @@ def predictCancer(data):
     # import scaler
     with open('scaler.pkl', 'rb') as file:
         scaler1 = pickle.load(file)
-
+    #create Data frame
     df2 = pd.DataFrame(data1)
     record_to_scale = df2.iloc[0:1]
     print("before std",df2)
