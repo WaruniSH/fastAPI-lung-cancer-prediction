@@ -1,7 +1,7 @@
 # Lung Cancer Prediction FastAPI App
 
 This FastAPI application predicts the likelihood of lung cancer based on a list of symptoms provided by the user. It exposes two endpoints:
-- **GET** endpoint: Provides general information about the app.
+- **GET** endpoint: Provides general information for test the app.
 - **POST** endpoint: Accepts a list of symptoms and responds with a prediction of whether the person has lung cancer or not.
 
 The application is built using FastAPI and Uvicorn for fast, asynchronous performance. A `requirements.txt` file is included to manage dependencies.
@@ -49,7 +49,7 @@ The application is built using FastAPI and Uvicorn for fast, asynchronous perfor
 ## Installation and Running the App
 
 ### 1. Clone the Repository
-git clone https://github.com/your-username/lung-cancer-prediction-fastapi.git
+git clone https://github.com/WaruniSH/lung-cancer-prediction-fastapi.git
 cd lung-cancer-prediction-fastapi
 
 ### 2. Create a Virtual Environment
