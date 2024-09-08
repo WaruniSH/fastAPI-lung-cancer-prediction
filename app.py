@@ -33,17 +33,14 @@ def predictCancer(data):
     #create Data frame
     df2 = pd.DataFrame(data1)
     record_to_scale = df2.iloc[0:1]
-    print("before std",df2)
     num_vars=['AGE']
     df2[num_vars]=scaler1.transform(record_to_scale[num_vars])
-    print("Standardized record",df2)
     single_sample = np.array(df2).reshape(1, -1)
-    print(single_sample)
+
     #import model
     with open('model.pkl', 'rb') as file:
         model = pickle.load(file)
     prediction= model.predict(single_sample)
-    print('prediction FROM FN',prediction)
     return prediction
 
 
@@ -57,7 +54,6 @@ def predict_lung_cancer(data:cancer):
         data = data.dict()
         prediction = predictCancer(data)
         python_list = prediction.tolist()
-        print('prediction',type(python_list))
         return {
             'prediction': python_list[0]
         }
